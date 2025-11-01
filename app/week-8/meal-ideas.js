@@ -9,12 +9,12 @@ import React, { useState, useEffect } from "react";
 export async function fetchMealIdeas(ingredient) {
   if (!ingredient) return [];
   try {
-    const url = `https://www.themealdb.com/api/json/v1/1/filter.php?i=${encodeURIComponent(
+    const url = `https://www.themealdb.com/api/json/v1/1/filter.php?i=${(
       ingredient
     )}`;
     const response = await fetch(url);
     if (!response.ok) {
-      console.error("Meal API response not ok", response.status);
+      console.error("Error", response.status);
       return [];
     }
     const data = await response.json();
@@ -43,10 +43,10 @@ export default function MealIdeas({ ingredient }) {
 
   return (
     <div className="p-4">
-      <h2 className="text-xl font-bold mb-3">Meal Ideas {ingredient ? `for "${ingredient}"` : ""}</h2>
+      <h2 className="text-xl font-bold mb-3">Meal Ideas (select an item){ingredient ? `for "${ingredient}"` : ""}</h2>
 
       {meals.length === 0 ? (
-        <p className="text-gray-500">No meals found.</p>
+        <p className="text-gray-500">Choose an item to see ideas.</p>
       ) : (
         <ul className="list-disc pl-6 space-y-2">
           {meals.map((meal) => (

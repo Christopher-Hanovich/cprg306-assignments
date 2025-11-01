@@ -35,7 +35,7 @@ export default function Page() {
   return (
     <main className="p-6">
       <div>   
-     <h1 className=" font-bold text-xl mb-6 pl-63">Shopping List + Meal Ideas</h1>
+     <h1 className=" font-bold text-xl mb-6 pl-63 ">Shopping List + Meal Ideas</h1>
     </div>
 
       <div className="flex flex-col md:flex-row gap-6 max-w-6xl mx-auto">

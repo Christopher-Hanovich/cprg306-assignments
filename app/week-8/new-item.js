@@ -34,11 +34,13 @@ export default function NewItem({ onAddItem }) {
     setQuantity(1);
     setCategory("produce");
   };
+  
 
   return (
+    <div>
     <form
       onSubmit={handleSubmit}
-      className="flex flex-col gap-4 bg-white p-4 rounded-2xl shadow-md w-full max-w-sm mx-auto"
+      className="flex flex-col gap-4 bg-white p-4 shadow-md w-full  mx-auto"
       
      
     
@@ -111,5 +113,7 @@ export default function NewItem({ onAddItem }) {
         Add Item
       </button>
     </form>
+    </div>
   );
+  
 }

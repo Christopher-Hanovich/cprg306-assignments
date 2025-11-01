@@ -8,9 +8,9 @@ export default function Item({ item, onSelect }) {
       className="cursor-pointer p-3 border rounded-lg hover:bg-blue-50 transition"
     >
       <div className="flex flex-col">
-        <span className="text-blue-800 font-bold">{name}</span>
-        <span className="text-sm text-gray-600">Quantity: {quantity}</span>
-        <span className="text-sm text-gray-600">Category: {category}</span>
+        <span className="text-white ">{name}</span>
+        <span className="text-sm text-white">Quantity: {quantity}</span>
+        <span className="text-sm text-white">Category: {category}</span>
       </div>
     </li>
   );
