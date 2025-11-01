@@ -43,11 +43,13 @@ export default function MealIdeas({ ingredient }) {
 
   return (
     <div className="p-4">
-      <h2 className="text-xl font-bold mb-3">Meal Ideas (select an item){ingredient ? `for "${ingredient}"` : ""}</h2>
+      <h2 className="text-xl font-bold mb-3">Meal Ideas  {ingredient ? `for "${ingredient}"` : "(select an item)"}</h2>
 
-      {meals.length === 0 ? (
-        <p className="text-gray-500">Choose an item to see ideas.</p>
-      ) : (
+      {!ingredient ? (
+        <p className="text-gray-500">Choose an item</p>
+      ) : meals.length === 0 ? (
+        <p className="text-gray-500">No meals found</p>
+      )  : (
         <ul className="list-disc pl-6 space-y-2">
           {meals.map((meal) => (
             <li key={meal.idMeal} className="flex items-center space-x-3">
