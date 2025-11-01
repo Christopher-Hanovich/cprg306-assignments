@@ -18,7 +18,7 @@ export default function ItemList({ items, onItemSelect }) {
   return (
     <div className="p-4 w-full ">
       <div className="flex items-center mb-4 space-x-2">
-        <h2 className="text-sm font-light text-gray-50">Sort by: </h2>
+        <h2 className="text-sm font-light text-black">Sort by: </h2>
         <div className="space-x-2">
            <button
         className={`px-3 py-1 rounded transition-colors duration-300
