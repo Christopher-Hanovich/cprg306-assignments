@@ -29,6 +29,9 @@ export default function Home() {
       <p className="mb-2 text-center">
         <Link href="/week-9">Week 9</Link>
       </p>
+      <p className="mb-2 text-center">
+        <Link href="/week-10">Week 10</Link>
+      </p>
     </main>
   );
 }
